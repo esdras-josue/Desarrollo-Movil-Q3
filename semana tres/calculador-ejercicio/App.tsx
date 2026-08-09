@@ -9,6 +9,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
+
       <CalculateExercises 
         periodLength = {result.periodLength}
         trainingDays={result.trainingDays}
@@ -18,6 +19,7 @@ export default function App() {
         target={result.target}
         average={result.average}
       />
+      
     </View>
   );
 }

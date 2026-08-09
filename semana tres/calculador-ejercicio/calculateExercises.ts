@@ -13,7 +13,6 @@ export function calculateExercises(dailyHours: number[], target: number)
     }
     
     const average = totalHours / periodLength;
-    console.log(average);
     
     if(average >= target) {
         rating = 3;
