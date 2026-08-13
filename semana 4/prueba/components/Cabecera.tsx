@@ -9,7 +9,7 @@ export default function Cabecera() {
   return (
     <View style={styles.container}>
       <Image 
-            source={require("../assets")}
+            source={require("../image/clifford de cachorrito.jpg")}
             style={styles.imagen} 
         />
 
@@ -29,6 +29,8 @@ const styles = StyleSheet.create({
         width: 180,
         height: 180,
         marginBottom: 15,
+        borderRadius: 90,
+        resizeMode: "cover",
     },
 
     nombre: {
