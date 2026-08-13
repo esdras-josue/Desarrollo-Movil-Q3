@@ -1,11 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import FormularioEstudiante from './components/FormularioEstudiante';
+import ProviderEstudiante from './provider/ProviderEstudiante';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <FormularioEstudiante />
+      <ProviderEstudiante>
+        <FormularioEstudiante />
+      </ProviderEstudiante>
       <StatusBar style="auto" />
     </View>
   );
