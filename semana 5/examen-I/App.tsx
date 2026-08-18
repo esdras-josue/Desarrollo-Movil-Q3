@@ -1,12 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import RecetaProvider from './Provider/RecetaProvider';
+import FormularioReceta from './Components/FormularioReceta';
+import ListaReceta from './Components/ListaReceta';
+import DetalleReceta from './Components/DetalleReceta';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <RecetaProvider>
+      <ScrollView>
+        <FormularioReceta />
+        <ListaReceta />
+        <DetalleReceta />
+      </ScrollView>
+    </RecetaProvider>
+
   );
 }
 
