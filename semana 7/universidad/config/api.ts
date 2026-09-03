@@ -6,7 +6,7 @@ declare const process: {
   };
 };
 
-const LAN_API_URL = "http://192.168.101.7:5000";
+const LAN_API_URL = "";
 const WEB_API_URL = "http://localhost:5000";
 
 export const API_URL =
