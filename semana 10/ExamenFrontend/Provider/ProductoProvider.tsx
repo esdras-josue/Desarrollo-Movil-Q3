@@ -54,7 +54,7 @@ export default function ProductoProvider({ children }: { children: React.ReactNo
     }
     
   return (
-    <ProductoContext.Provider value={{ getProductos, guardarProducto,eliminarProducto}}>
+    <ProductoContext.Provider value={{ listaProductos ,getProductos, guardarProducto,eliminarProducto}}>
       {children}
     </ProductoContext.Provider>
   )

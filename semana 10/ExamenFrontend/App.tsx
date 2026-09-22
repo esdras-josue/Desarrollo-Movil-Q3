@@ -1,12 +1,34 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import Nav from './components/Nav';
+import AgregarProducto from './pages/AgregarProducto';
+import MostrarProductos from './pages/MostrarProductos';
+
+import ProductoProvider, { useContextProducto } from './Provider/ProductoProvider';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { NavigationContainer } from '@react-navigation/native';
+
+const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Nav />
-    </View>
+    <ProductoProvider>
+      <NavigationContainer>
+        <Tab.Navigator>
+
+          <Tab.Screen
+            name='Productos'
+            component={MostrarProductos}
+          />
+
+          <Tab.Screen 
+            name="CrearProducto"
+            component={AgregarProducto}
+          />
+
+        </Tab.Navigator>
+      </NavigationContainer>
+    </ProductoProvider>
   );
 }
 
