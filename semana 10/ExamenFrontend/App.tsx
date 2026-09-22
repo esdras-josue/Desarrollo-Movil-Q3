@@ -7,6 +7,7 @@ import MostrarProductos from './pages/MostrarProductos';
 import ProductoProvider, { useContextProducto } from './Provider/ProductoProvider';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
+import DetallesProductos from './pages/DetallesProductos';
 
 const Tab = createBottomTabNavigator();
 
@@ -22,8 +23,13 @@ export default function App() {
           />
 
           <Tab.Screen 
-            name="CrearProducto"
+            name='CrearProducto'
             component={AgregarProducto}
+          />
+
+          <Tab.Screen 
+            name='DetallesProductos'
+            component={DetallesProductos}
           />
 
         </Tab.Navigator>

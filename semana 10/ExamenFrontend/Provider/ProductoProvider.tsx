@@ -1,4 +1,4 @@
-import { View, Text, ViewProps, Alert } from 'react-native'
+import { Alert } from 'react-native'
 import React, { useContext, useState } from 'react'
 import { Producto } from '../models/Producto'
 import { API_URL } from '../config/api';

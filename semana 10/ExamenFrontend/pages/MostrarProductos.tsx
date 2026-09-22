@@ -9,8 +9,11 @@ import {
 } from "react-native";
 import React, { useEffect } from "react";
 import { useContextProducto } from "../Provider/ProductoProvider";
+import { useNavigation } from "@react-navigation/native";
 
 export default function MostrarProductos() {
+
+  const navigation = useNavigation<any>();
   const { listaProductos, getProductos, eliminarProducto } =
     useContextProducto();
 
@@ -67,8 +70,14 @@ export default function MostrarProductos() {
               <Text>Estado: {item.estado}</Text>
 
               <View style={styles.botones}>
-                <TouchableOpacity style={styles.botonDetalle}>
-                  <Text style={styles.textoBoton}>Detalle</Text>
+                <TouchableOpacity
+                    onPress={() => 
+                        navigation.navigate("DetallesProductos", {
+                            producto: item
+                        })
+                    }
+                >
+                  <Text>Detalle</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity

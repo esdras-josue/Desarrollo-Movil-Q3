@@ -1,7 +1,5 @@
 CREATE DATABASE examen_productos;
 
-USE examen_productos;
-
 CREATE TABLE productos (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL,
